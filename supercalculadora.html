@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Super Calculadora"/>
+        <meta name="keywords" content="HTML, CSS, JS, tailwind"/>
+        <meta name="author" content="Marcelo Castro"/>
+        <meta charset="UTF-8">
+        <title>Super Calculadora</title>
+        <!-- tailwind -->
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <!-- css da pagina -->
+        <link rel="stylesheet" href="src/style.css">
+    </head>
+
+    <body>
+        <header>
+            <br/>
+            <h1>Super Calculadora</h1>
+            <div class="entradas"><div class="entradas-text">Primeiro número (A): </div><input id="A" type="number"/>
+            <div class="entradas-text">Segundo número (B):</div>  <input id="B" type="number"/>   <button onclick="main()">Calcular</button></div>
+        </header>
+        <br/>
+        <div class="results">
+            <div class="results-table">
+                <div class="results-line">
+                    <div class="results-box">
+                        <h4>Soma</h4>
+                        <p class="result-value" id="soma">-</p>
+                    </div>
+                    <div class="results-box">
+                        <h4>Multiplicação</h4>
+                        <p class="result-value" id="mult">-</p>
+                    </div>
+                    <div class="results-box">
+                        <h4>Potência de A na base B</h4>
+                        <p class="result-value" id="potAB">-</p>
+                    </div>
+
+                    <div class="results-box">
+                        <h4>Raiz quadrada de B</h4>
+                        <p class="result-value" id="raizB">-</p>
+                    </div>
+                    <div class="results-box">
+                        <h4>Porcentagem de A em relação a B</h4>
+                        <p class="result-value" id="porcAB">-</p>
+                    </div>                    
+                </div>
+
+
+                <div class="results-line">
+                    <div class="results-box">
+                        <h4>Subtração A-B</h4>
+                        <p class="result-value" id="subAB">-</p>
+                    </div>
+                    <div class="results-box">
+                        <h4>Divisão A/B</h4>
+                        <p class="result-value" id="divAB">-</p>
+                    </div>
+                    <div class="results-box">
+                        <h4>Potência de B na base A</h4>
+                        <p class="result-value" id="potBA">-</p>
+                    </div>
+                    <div class="results-box">
+                        <h4>Fatorial de A</h4>
+                        <p class="result-value" id="fatA">-</p>
+                    </div>
+                    <div class="results-box">
+                        <h4>Porcentagem de B em relação a A</h4>
+                        <p class="result-value" id="porcBA">-</p>
+                    </div>
+                </div>
+
+
+
+                <div class="results-line">
+                    
+                    <div class="results-box">
+                        <h4>Subtração B-A</h4>
+                        <p class="result-value" id="subBA">-</p>
+                    </div>
+                    <div class="results-box">
+                        <h4>Divisão B/A</h4>
+                        <p class="result-value" id="divBA">-</p>
+                    </div>
+                    <div class="results-box">
+                        <h4>Raiz quadrada de A</h4>
+                        <p class="result-value" id="raizA">-</p>
+                    </div>
+                    <div class="results-box">
+                        <h4>Fatorial de B</h4>
+                        <p class="result-value" id="fatB">-</p>
+                    </div>
+                    <div class="results-box">
+                        <h4>Média</h4>
+                        <p class="result-value" id="med">-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <!--JS da page muda-->
+    <script src="src/calc.js"></script>
+
+</html>

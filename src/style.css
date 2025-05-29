@@ -1,0 +1,85 @@
+
+/* Tags nova*/
+html{
+    margin: 0px auto 0px auto;
+}
+body{
+    background-color: #111111;
+    margin: 0px auto 0px auto;
+    max-width: 100%;
+}
+
+h1{
+    color: #94ff30;
+    text-align: center;
+}
+button{
+    background-color: #94ff30;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+    border-right: 10px;
+    padding: 6px 5px 6px 5px;
+}
+input{
+    margin: 0px 15px 0px 15px;
+    max-height: 17px;
+}
+h4{
+    color: rgb(103, 119, 187);
+    margin: 0px ;
+    text-indent: 2px;
+}
+
+/* classes */
+.entradas{
+    color: #94ff30;
+    display: flex;
+    justify-content: center;
+    margin: 0px auto 0px auto;
+    max-width: 100%;
+}
+.entradas-text{
+    margin: 0px 15px 0px 15px;
+}
+.results{
+    background-color: #323233;
+    height: 500px;
+    border-top: #585858;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+}
+.results-table{
+    display: flex;
+    justify-content: center;
+    margin: 10px auto 0px auto;
+    max-width: 100%;
+}
+.result-line{
+    display: flex;
+    justify-content: center;
+    margin: 0px auto 0px auto;
+    height: 60px;
+    width: 900px;
+}
+.results-box{
+    border-style: solid;
+    border-color: #111111;
+    border-width: 1px;
+    height: 60px;
+    width: 300px;
+    padding: 2px;
+}
+.result-value{
+    color: beige;
+    margin: 5px auto auto 8px;
+    border: 2px;
+    font-size: 25px; 
+    
+}
+
+/* ids */
+
+
