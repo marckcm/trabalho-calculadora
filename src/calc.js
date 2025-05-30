@@ -10,12 +10,12 @@ function main(){
     subAB(a,b);
     divAB(a,b);
     potBA(a,b);
-    fatA(a,b);
+    fatA(a);
     porcBA(a,b);
     subBA(a,b);
     divBA(a,b);    
-    raizA(a,b);
-    fatB(a,b);
+    raizA(a);
+    fatB(b);
     med(a,b);
 
 // função de soma
@@ -36,7 +36,7 @@ function potAB(a,b){
 
 // Raiz quadrada de B - raizB
 function raizB(b){
-    document.getElementById("raizB").innerHTML=Math.sqrt(b);
+    document.getElementById("raizB").innerHTML=Math.sqrt(b).toFixed(2);
 }
 
 // Porcentagem de A em relação a B - porcAB
@@ -52,7 +52,7 @@ function subAB(a,b){
 
 // Divisão A/B - divAB
 function divAB(a,b){
-    document.getElementById("divAB").innerHTML=a/b;
+    document.getElementById("divAB").innerHTML=(a/b).toFixed(2);
 }
 
 // Potência de B na base A - potBA
@@ -86,12 +86,12 @@ function subBA(a,b){
 
 // Divisão B/A - divBA
 function divBA(a,b){
-    document.getElementById("divBA").innerHTML=b/a;
+    document.getElementById("divBA").innerHTML=(b/a).toFixed(2);
 }
 
 // Raiz quadrada de A - raizA
 function raizA(a){
-    document.getElementById("raizA").innerHTML=Math.sqrt(a);
+    document.getElementById("raizA").innerHTML=Math.sqrt(a).toFixed(2);
 }
 
 // Fatorial de B - fatB
@@ -104,10 +104,10 @@ function fatB(b){
         }
         return resultado;
     }
-    document.getElementById("fatA").innerHTML = fatorial(b);
+    document.getElementById("fatB").innerHTML = fatorial(b);
 }
 
 // Média - med
 function med(a,b){
-    document.getElementById("med").innerHTML=a+b/2;
+    document.getElementById("med").innerHTML=(a+b)/2;
 }

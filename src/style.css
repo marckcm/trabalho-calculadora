@@ -13,15 +13,19 @@ h1{
     color: #94ff30;
     text-align: center;
 }
-button{
+
+/* button{
     background-color: #94ff30;
     border-top-left-radius: 15%;
     border-top-right-radius: 15%;
     border-bottom-left-radius: 15%;
     border-bottom-right-radius: 15%;
     border-right: 10px;
-    padding: 6px 5px 6px 5px;
-}
+    padding: 6px 5px 6px 5px; 
+    }
+*/
+
+
 input{
     margin: 0px 15px 0px 15px;
     max-height: 17px;

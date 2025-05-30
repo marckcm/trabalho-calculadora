@@ -1,126 +1,125 @@
 <!DOCTYPE html>
-<html lang="pt-br">
 
+<html lang="pt-br">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Super Calculadora"/>
         <meta name="keywords" content="HTML, CSS, JS, tailwind"/>
         <meta name="author" content="Marcelo Castro"/>
-        <meta charset="UTF-8">
         <title>Super Calculadora</title>
-        <!-- tailwind -->
-        <link rel="stylesheet" href="src/style.css">
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <!-- css da pagina -->
+
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
-    <body class="font-serif">         
-        <header class="pb-10 ">
-            <br/>
-            <h1 class="font-bold text-4xl pb-10">Super Calculadora</h1>
-            <div class="entradas"><div class="entradas-text">Primeiro número (A): </div><input id="A" type="number"/>
-            <div class="entradas-text">Segundo número (B):</div>  <input id="B" type="number"/>   <button onclick="main()">Calcular</button></div>
+    <body class="bg-gray-100 font-serif text-lg">
+
+        <header class="bg-blue-100 p-6 shadow-md flex flex-wrap items-center justify-between gap-4">
+
+            <!-- Título -->
+            <h1 class="text-3xl font-bold text-blue-800 whitespace-nowrap">
+                Super Calculadora
+            </h1>
+
+            <!-- Campo A -->
+            <label for="A" class="text-blue-900 font-medium">A:</label>
+            <input id="A" type="number"
+                class="w-24 border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+            <!-- Campo B -->
+            <label for="B" class="text-blue-900 font-medium">B:</label>
+            <input id="B" type="number"
+                class="w-24 border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+            <!-- Botão -->
+            <button onclick="main()"
+                class="bg-blue-600 text-white py-2 px-4 rounded-xl hover:bg-blue-700 transition">
+                Calcular
+            </button>
+
         </header>
-        
-        <div class="results">
 
-            <div class="results-table">
 
-                <div class="results-line">
+        <main class="max-w-6xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-                    <div class="results-box">
-                        <h4>Soma</h4>
-                        <p class="result-value" id="soma">-</p>
+                <!-- Coluna 1 -->
+                <div class="space-y-4">
+                    <div>
+                    <h4 class="font-semibold">Soma</h4>
+                    <p id="soma" class="text-blue-600">-</p>
                     </div>
-
-                    <div class="results-box">
-                        <h4>Multiplicação</h4>
-                        <p class="result-value" id="mult">-</p>
+                    <div>
+                        <h4 class="font-semibold">Multiplicação</h4>
+                        <p id="mult" class="text-blue-600">-</p>
                     </div>
-
-                    <div class="results-box">
-                        <h4>Potência de A na base B</h4>
-                        <p class="result-value" id="potAB">-</p>
+                    <div>
+                        <h4 class="font-semibold">Potência de A^B</h4>
+                        <p id="potAB" class="text-blue-600">-</p>
                     </div>
-
-                    <div class="results-box">
-                        <h4>Raiz quadrada de B</h4>
-                        <p class="result-value" id="raizB">-</p>
+                    <div>
+                        <h4 class="font-semibold">Raiz quadrada de B</h4>
+                        <p id="raizB" class="text-blue-600">-</p>
                     </div>
-
-                    <div class="results-box">
-                        <h4>Porcentagem de A em relação a B</h4>
-                        <p class="result-value" id="porcAB">-</p>
-                    </div> 
-
+                    <div>
+                        <h4 class="font-semibold">A em % de B</h4>
+                        <p id="porcAB" class="text-blue-600">-</p>
+                    </div>
                 </div>
 
-                <div class="results-line">
-
-                    <div class="results-box">
-                        <h4>Subtração A-B</h4>
-                        <p class="result-value" id="subAB">-</p>
+                <!-- Coluna 2 -->
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="font-semibold">Subtração A - B</h4>
+                        <p id="subAB" class="text-blue-600">-</p>
                     </div>
-
-                    <div class="results-box">
-                        <h4>Divisão A/B</h4>
-                        <p class="result-value" id="divAB">-</p>
+                    <div>
+                        <h4 class="font-semibold">Divisão A / B</h4>
+                        <p id="divAB" class="text-blue-600">-</p>
                     </div>
-
-                    <div class="results-box">
-                        <h4>Potência de B na base A</h4>
-                        <p class="result-value" id="potBA">-</p>
+                    <div>
+                        <h4 class="font-semibold">Potência de B^A</h4>
+                        <p id="potBA" class="text-blue-600">-</p>
                     </div>
-
-                    <div class="results-box">
-                        <h4>Fatorial de A</h4>
-                        <p class="result-value" id="fatA">-</p>
+                    <div>
+                        <h4 class="font-semibold">Fatorial de A</h4>
+                        <p id="fatA" class="text-blue-600">-</p>
                     </div>
-
-                    <div class="results-box">
-                        <h4>Porcentagem de B em relação a A</h4>
-                        <p class="result-value" id="porcBA">-</p>
+                    <div>
+                        <h4 class="font-semibold">B em % de A</h4>
+                        <p id="porcBA" class="text-blue-600">-</p>
                     </div>
-
                 </div>
 
-                <div class="results-line">
-                    
-                    <div class="results-box">
-                        <h4>Subtração B-A</h4>
-                        <p class="result-value" id="subBA">-</p>
+                <!-- Coluna 3 -->
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="font-semibold">Subtração B - A</h4>
+                        <p id="subBA" class="text-blue-600">-</p>
                     </div>
-
-                    <div class="results-box">
-                        <h4>Divisão B/A</h4>
-                        <p class="result-value" id="divBA">-</p>
+                    <div>
+                        <h4 class="font-semibold">Divisão B / A</h4>
+                        <p id="divBA" class="text-blue-600">-</p>
                     </div>
-
-                    <div class="results-box">
-                        <h4>Raiz quadrada de A</h4>
-                        <p class="result-value" id="raizA">-</p>
+                    <div>
+                        <h4 class="font-semibold">Raiz quadrada de A</h4>
+                        <p id="raizA" class="text-blue-600">-</p>
                     </div>
-
-                    <div class="results-box">
-                        <h4>Fatorial de B</h4>
-                        <p class="result-value" id="fatB">-</p>
+                    <div>
+                        <h4 class="font-semibold">Fatorial de B</h4>
+                        <p id="fatB" class="text-blue-600">-</p>
                     </div>
-
-                    <div class="results-box">
-                        <h4>Média</h4>
-                        <p class="result-value" id="med">-</p>
+                    <div>
+                        <h4 class="font-semibold">Média</h4>
+                        <p id="med" class="text-blue-600">-</p>
                     </div>
-
                 </div>
 
             </div>
+        </main>
 
-        </div>
-
+        <!-- Scripts -->
+        <script src="src/calc.js"></script>
     </body>
-
-    <!--JS da page muda-->
-    <script src="src/calc.js"></script>
-
 </html>
