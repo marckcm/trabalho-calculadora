@@ -1,6 +1,12 @@
 function main(){
-    var a=parseInt(document.getElementById("A").value);
-    var b=parseInt(document.getElementById("B").value);
+    var a = parseFloat(document.getElementById("A").value);
+    var b = parseFloat(document.getElementById("B").value);
+
+    if (isNaN(a) || isNaN(b)) {
+        alert("Digite valores válidos para A e B.");
+        return;
+    }
+
     // Chamada das funções
     soma(a,b);
     mult(a,b);
@@ -17,9 +23,9 @@ function main(){
     raizA(a);
     fatB(b);
     med(a,b);
+}  
 
 // função de soma
-}
 function soma(a,b){
     document.getElementById("soma").innerHTML=a+b;
 }
@@ -31,12 +37,16 @@ function mult(a,b){
 
 // função de Potência de A na base B - potAB
 function potAB(a,b){
-    document.getElementById("potAB").innerHTML=Math.pow(b, a);
+    document.getElementById("potAB").innerHTML=Math.pow(a, b);
 }
 
 // Raiz quadrada de B - raizB
 function raizB(b){
-    document.getElementById("raizB").innerHTML=Math.sqrt(b).toFixed(2);
+    if (b < 0) {
+        return document.getElementById("raizB").innerHTML="Número Negativo";
+    } else {
+        return document.getElementById("raizB").innerHTML=Math.sqrt(b).toFixed(2);
+    }
 }
 
 // Porcentagem de A em relação a B - porcAB
@@ -51,21 +61,25 @@ function subAB(a,b){
 }
 
 // Divisão A/B - divAB
-function divAB(a,b){
-    document.getElementById("divAB").innerHTML=(a/b).toFixed(2);
+function divAB(a, b){
+    if (b === 0) {
+        document.getElementById("divAB").innerHTML = "Divisão por zero";
+    } else {
+        document.getElementById("divAB").innerHTML = (a / b).toFixed(2);
+    }
 }
 
 // Potência de B na base A - potBA
 function potBA(a,b){
-    document.getElementById("potBA").innerHTML=Math.pow(a, b);
+    document.getElementById("potBA").innerHTML=Math.pow(b, a);
 }
 
 // Fatorial de A - fatA
 function fatA(a) {
     function fatorial(a) {
         if (a < 0) return "Numero Negarivo";
-        let resultado = 1;
-        for (let i = 2; i <= a; i++) {
+            let resultado = 1;
+            for (let i = 2; i <= a; i++) {
             resultado *= i;
         }
         return resultado;
@@ -85,21 +99,29 @@ function subBA(a,b){
 }
 
 // Divisão B/A - divBA
-function divBA(a,b){
-    document.getElementById("divBA").innerHTML=(b/a).toFixed(2);
+function divBA(a, b){
+    if (a === 0) {
+        document.getElementById("divBA").innerHTML = "Divisão por zero";
+    } else {
+        document.getElementById("divBA").innerHTML = (b / a).toFixed(2);
+    }
 }
 
 // Raiz quadrada de A - raizA
 function raizA(a){
-    document.getElementById("raizA").innerHTML=Math.sqrt(a).toFixed(2);
+    if (a < 0) {
+        document.getElementById("raizA").innerHTML="Número Negativo";
+    } else {
+        document.getElementById("raizA").innerHTML=Math.sqrt(a).toFixed(2);
+    }
 }
 
 // Fatorial de B - fatB
 function fatB(b){
     function fatorial(b) {
-        if (a < 0) return "Numero Negarivo";
+        if (b < 0) return "Numero Negarivo";
         let resultado = 1;
-        for (let i = 2; i <= a; i++) {
+        for (let i = 2; i <= b; i++) {
             resultado *= i;
         }
         return resultado;
